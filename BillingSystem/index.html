@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing software</title>
+    <link rel="stylesheet" href="billingSystem.css">
+</head>
+<body>
+    
+    <h1 class="heading">CornerStone Stationary Store</h1>
+
+
+    <div class="container">
+
+        <div class="boxes row1" id="products">
+            <h5>Product:</h5>
+            <select id="productName" name="" onchange="updateEverything(this)">
+                <option value="">select</option>
+            </select>
+        </div>
+        <div class="boxes row1">
+            <h5>Quantity:</h5>
+            <select id="productQuantity" name="" onchange="onQuantityChange(this)">
+                
+            </select>
+        </div>
+        <div class="boxes row1">
+            <h5>Price:</h5>
+            <p id="productPrice">0</p>
+        </div>
+        <div class="boxes row1">
+            <h5>Discount:</h5>
+            <p id="productDiscount">0</p>
+        </div>
+        <div class="boxes row1">
+            <h5>product Total:</h5>
+            <p id="productTotal">0</p>
+        </div>
+
+        <div class="boxes row2">
+            <button id="addProduct" onclick="addProduct()">ADD PRODUCT</button>
+        </div>
+        <div class="boxes row2" id="billDetail">
+             <p id="main">Bill Summary</p>
+             <p id="summaryHeadings"><span>Product</span> <span>Price</span> <span>Quantity</span> <span>Discount</span> <span>Total</span></p>
+             <p id="summary">
+
+             </p>
+
+        </div>
+        <div class="boxes row2">
+            <h5>Total Discount:</h5>
+            <p id="totalDiscount">0</p>
+        </div>
+        
+        <div class="boxes row3">
+            <button id="generateBill" onclick="generateBill()">GENERATE BILL</button>
+        </div>
+        <div class="boxes row3">
+            <h5>Amount after discount:</h5>
+            <p id="afterDiscount">0</p>
+        </div>
+        
+        <div class="boxes row4">
+            <button id="discard" onclick="discard()">DISCARD</button>
+        </div>
+        <div class="boxes row4">
+            <h5>After 17% Gst:</h5>
+            <p id="afterGst">0</p>
+        </div>
+
+    
+    </div>
+
+
+    <script src="billingSystem.js"></script>
+</body>
+</html>
+
+
